@@ -1,0 +1,138 @@
+<div class="auction-block">
+    <div class="promo-img">
+        <img src="../resources/Rectangle 3566.png" alt="image" id="aucimg">
+        <div class="glass-timer"><span class="time" id="glassTimer">5h : 40m : 30s</span></div>
+    </div>
+    <div class="promo-img-info">
+        <b><span class="size-name" id="artname">Purple Mannequin 3d Art Design</span></b>
+        <div class="bet">
+            <div class="cur-price">
+                <span class="type">Current Bid</span>
+                <span class="name" id="swprice">0.986 ETH</span>
+            </div>
+            <button class="blue-button buy-btn">Place a Bid</button>
+        </div>
+        <div class="promo-img-info-detailed">
+            <div class="info-line">
+                <span class="type">Date</span>
+                <span class="name">02 - 03 - 2022</span>
+            </div>
+            <div class="info-line">
+                <span class="type">Metadata</span>
+                <span class="name">Frozen</span>
+            </div>
+            <div class="info-line">
+                <span class="type">Blockchain</span>
+                <span class="name">Ethereum</span>
+            </div>
+        </div>
+        <div class="creator-info">
+            <div class="creator">
+                <img src="../resources/Ellipse 4.png" alt="creator ava" id="auava">
+                <div class="creator-name">
+                    <span class="name" id="swcreator">Nadim Amanda</span>
+                    <span class="type">Creator</span>
+                </div>
+            </div>
+            <div class="creator-finace-info">
+                <div class="eth-logo"><img src="../resources/ethereum.png" alt="eth-logo"></div>
+                <div class="eth-info">
+                    <span class="name">2.5 ETH</span>
+                    <span class="type">Instant Price</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="top-coll">
+    <b><span class="size-name">Top Collection</span></b>
+    <span class="type" onclick="viewall()">View All</span>
+</div>
+<div class="collections">
+    <div class="card">
+        <div class="like-header">
+            <div class="nickname">
+                <img src="../resources/Ellipse 7.png" alt="ava">
+                <div class="creator-name">
+                    <span class="name">Wi Seung Hyun</span>
+                    <span class="type">Owner</span>
+                </div>
+            </div>
+            <div class="grey-btn-cubic" onclick="like(this)"><img src="../resources/Heart.png" alt="plus"></div>
+        </div>
+        <div class="photo-wt-btn">
+            <img src="../resources/Rectangle 3573 (1).png" alt="art">
+            <button class="glass-btn" onclick="switchCards(this); return false;">Place a Bid</button>
+        </div>
+        <span class="name left-align">Yellow Tree Human Art</span>
+        <div class="line line1"></div>
+        <div class="card-finance-info">
+            <div class="creator-name">
+                <span class="type">Ending in</span>
+                <span class="name" id="timer2">5h 12m 6s</span>
+            </div>
+            <div class="creator-name">
+                <span class="type right-align">Highest bid</span>
+                <span class="name right-align">5.54 ETH</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="like-header">
+            <div class="nickname">
+                <img src="../resources/Ellipse 8 (1).png" alt="ava">
+                <div class="creator-name">
+                    <span class="name">Kim Tak</span>
+                    <span class="type">Owner</span>
+                </div>
+            </div>
+            <div class="grey-btn-cubic" onclick="like(this)"><img src="../resources/Heart.png" alt="plus"></div>
+        </div>
+        <div class="photo-wt-btn">
+            <img src="../resources/Rectangle 3573 (2).png" alt="art">
+            <button class="glass-btn" onclick="switchCards(this); return false;">Place a Bid</button>
+        </div>
+        <span class="name left-align">Green Tree Human Art</span>
+        <div class="line line1"></div>
+        <div class="card-finance-info">
+            <div class="creator-name">
+                <span class="type">Ending in</span>
+                <span class="name" id="timer3">6h 12m 6s</span>
+            </div>
+            <div class="creator-name">
+                <span class="type right-align">Highest bid</span>
+                <span class="name right-align">3.54 ETH</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="like-header">
+            <div class="nickname">
+                <img src="../resources/Ellipse 8.png" alt="ava">
+                <div class="creator-name">
+                    <span class="name">Kim Tae-Mu</span>
+                    <span class="type">Owner</span>
+                </div>
+            </div>
+            <div class="grey-btn-cubic" onclick="like(this)"><img src="../resources/Heart.png" alt="plus"></div>
+        </div>
+        <div class="photo-wt-btn">
+            <img src="../resources/Rectangle 3573.png" alt="art">
+            <button class="glass-btn" onclick="switchCards(this); return false;">Place a Bid</button>
+        </div>
+        <span class="name left-align">White Tree Human Art</span>
+        <div class="line line1"></div>
+        <div class="card-finance-info">
+            <div class="creator-name">
+                <span class="type">Ending in</span>
+                <span class="name" id="timer4">7h 12m 6s</span>
+            </div>
+            <div class="creator-name" onload="timers()">
+                <span class="type right-align">Highest bid</span>
+                <span class="name right-align">4.54 ETH</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/mainpage.js"></script>
+<script>preload();</script>
