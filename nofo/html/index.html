@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/judge.png" alt="category4"><input type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/notification-favorite.png" alt="category5"><input type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png" alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/setting-2.png" alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png" alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
             </div>
             <div class="exit" onclick="window.close (); return false"><img src="../resources/Logout.png" alt="exit"></div>
         </div>
@@ -41,7 +41,15 @@
                             <input type="text" name="field" class="search-field" id="search-field" placeholder="Search something...">
                         </form>
                     </div>
-                    <div class="grey-btn" id="filter-btn"><img src="../resources/Filter.png" alt="filter"></div>
+                    <div class="grey-btn" id="filter-btn">
+                        <img src="../resources/Filter.png" alt="filter">
+                        <div class="filter-field">
+                            <div class="pricefromto">
+                                <span class="name">Price From<input type="text" id="from" pattern="[0-9]" placeholder="0"> To <input type="text" id="to" pattern="[0-9]{1,}" placeholder="100"></span>
+                                <span class="name">Remaining time <input type="text" id="fromtime" pattern="[0-9]{2}" placeholder="12"> To <input type="text" pattern="[0-9]{2}" placeholder="12" id="fromtimeto"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="grey-btn" id="not"><img src="../resources/Notification.png" alt="notifications">
                         <div class="point" id="point"></div>
                         <div class="notification-list" id="notifList"></div>
@@ -64,7 +72,7 @@
                     <span class="type">The Collector was effectively the most important administrative figure in an Indian district.</span>
                 </div>
                 <div class="description-buttons">
-                    <button class="blue-button account-btn">Follow +</button>
+                    <button class="blue-button account-btn">Your Account</button>
                     <div class="grey-btn"><input type="file" name="upload" id="upload"><img src="../resources/Upload.png" alt="share"></div>
                     <div class="grey-btn"><img src="../resources/Group 427320311.png" alt="more"></div>
                 </div>

@@ -5,10 +5,17 @@ let words = ['drink', 'memory', 'abrupt', 'guiltless', 'afford', 'design', 'time
 
 let millisecs = [10000, 23000, 43281, 3823];
 
+let theme = true;
+
 function menu(th) {
     th.lastChild.onchange = function () {
         clearTimers();
-        document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
+        if (theme){
+            document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
+        }
+        else{
+            document.querySelector('.check').firstChild.style.filter = "grayscale(100%) invert()";
+        }
         document.querySelector('.check').firstChild.style.opacity = ".3";
         document.querySelector('.check').classList.remove('check');
         th.classList.toggle("check", this.checked);
@@ -30,6 +37,12 @@ function mainpage() {
 function shoppage() {
     $(function () {
         $("#contentmaincontent").load("../html/shop.html");
+    });
+}
+// Create settings page
+function settingspage(){
+    $(function () {
+        $("#contentmaincontent").load("../html/settings.html");
     });
 }
 // Remove all content from main page
@@ -72,5 +85,4 @@ function openCard(th) {
         document.getElementById('swcreator').textContent = cur_creator;
         document.getElementById('swprice').textContent = cur_price;
     }, 1500)
-
 }

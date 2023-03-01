@@ -45,16 +45,32 @@ catalog.addEventListener('scroll', (event) => {
     }
 })
 
-document.getElementById('search-field').oninput = function () {
-    let val = this.value.trim().toLowerCase();
+document.getElementById('search-field').oninput = function (){
+    let val = document.getElementById('search-field').value.trim().toLowerCase();
     let searchel = document.querySelectorAll('.card .searchingname');
+    let from = document.getElementById('from').value;
+    let to = document.getElementById('to').value;
+    let lefttimefrom = document.getElementById('fromtime').value;
+    let lefttimeto = document.getElementById('fromtimeto').value;
+    if (from == ''){
+        from = 0;
+    }
+    if(to == ''){
+        to = 100;
+    }
+    if(lefttimeto == ''){
+        lefttimeto = 25;
+    }
+    if(lefttimefrom == ''){
+        lefttimefrom = 0;
+    }
     if (val != '') {
         searchel.forEach(element => {
-            if (element.innerText.toLowerCase().search(val) == -1) {
-                element.parentElement.classList.add('hiden');
+            if (element.innerText.toLowerCase().search(val) != -1 && (from <= parseFloat(element.parentElement.childNodes[9].childNodes[3].childNodes[3].textContent.replace(' ETH', ''), 10) && to >= parseFloat(element.parentElement.childNodes[9].childNodes[3].childNodes[3].textContent.replace(' ETH', ''), 10)) && (lefttimefrom <= element.parentElement.childNodes[9].childNodes[1].childNodes[3].textContent.replace(' hours left', '') && lefttimeto >= element.parentElement.childNodes[9].childNodes[1].childNodes[3].textContent.replace(' hours left', ''))){
+                element.parentElement.classList.remove('hiden');
             }
             else {
-                element.parentElement.classList.remove('hiden');
+                element.parentElement.classList.add('hiden');
             }
         });
     }
