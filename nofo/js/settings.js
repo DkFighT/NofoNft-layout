@@ -33,7 +33,6 @@ navigator.getBattery().then((battery) => {
     function updateAllBatteryInfo() {
         updateChargeInfo();
         updateLevelInfo();
-        updateChargingInfo();
         updateDischargingInfo();
     }
     updateAllBatteryInfo();
@@ -71,14 +70,6 @@ navigator.getBattery().then((battery) => {
         batary_level.style.top = `${100 - battery.level * 100}%`;
         persents.textContent = `${battery.level * 100}%`;
 
-    }
-
-    battery.addEventListener("chargingtimechange", () => {
-        updateChargingInfo();
-    });
-    function updateChargingInfo() {
-        console.log(`Battery charging time: ${battery.chargingTime} seconds`);
-        
     }
 
     battery.addEventListener("dischargingtimechange", () => {
