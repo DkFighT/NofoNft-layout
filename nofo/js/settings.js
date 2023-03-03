@@ -90,7 +90,7 @@ navigator.getBattery().then((battery) => {
         chargtime.textContent = `Left time: ${Math.floor(battery.dischargingTime / 60 / 60)}h : ${Math.floor(battery.dischargingTime % 60)}m`;
         }
         else{
-            chargtime.textContent = `Left time: ${battery.dischargingTime}`;
+            chargtime.textContent = `Left time: Charging`;
         }
     }
 });
