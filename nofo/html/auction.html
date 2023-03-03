@@ -37,7 +37,7 @@
             <div class="creator-finace-info">
                 <div class="eth-logo"><img src="../resources/ethereum.png" alt="eth-logo"></div>
                 <div class="eth-info">
-                    <span class="name">2.5 ETH</span>
+                    <span class="name" id="hightest">2.5 ETH</span>
                     <span class="type">Instant Price</span>
                 </div>
             </div>
@@ -135,4 +135,12 @@
     </div>
 </div>
 <script src="../js/mainpage.js"></script>
-<script>preload();</script>
+<script>
+    var elem = document.querySelectorAll('.name.right-align');
+    document.getElementById('swprice').textContent = course();
+    document.getElementById('hightest').textContent = course();
+    elem.forEach(element => {
+        element.textContent = course();
+    });
+    preload();
+</script>

@@ -25,7 +25,7 @@
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png" alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png" alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
             </div>
-            <div class="exit" onclick="window.close (); return false"><img src="../resources/Logout.png" alt="exit"></div>
+            <div class="exit" onclick="exit(); return false"><img src="../resources/Logout.png" alt="exit"></div>
         </div>
         <div class="main-content" id="maincontent">
             <div class="preloader" id="preloader"><div class="loader"></div></div>
@@ -45,7 +45,7 @@
                         <img src="../resources/Filter.png" alt="filter">
                         <div class="filter-field">
                             <div class="pricefromto">
-                                <span class="name">Price From<input type="text" id="from" pattern="[0-9]" placeholder="0"> To <input type="text" id="to" pattern="[0-9]{1,}" placeholder="100"></span>
+                                <span class="name">Price From<input type="text" id="from" pattern="[0-9]{1,}" placeholder="0"> To <input type="text" id="to" pattern="[0-9]{1,}" placeholder="100"></span>
                                 <span class="name">Remaining time <input type="text" id="fromtime" pattern="[0-9]{2}" placeholder="12"> To <input type="text" pattern="[0-9]{2}" placeholder="12" id="fromtimeto"></span>
                             </div>
                         </div>
