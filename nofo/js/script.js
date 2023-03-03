@@ -5,6 +5,13 @@ let words = ['drink', 'memory', 'abrupt', 'guiltless', 'afford', 'design', 'time
 
 let millisecs = [10000, 23000, 43281, 3823];
 
+let euro = false;
+let rub = false;
+let usd = false;
+let nft = true;
+let btc = false;
+let coin = [euro, usd, rub, nft, btc];
+
 let theme = true;
 
 function menu(th) {
@@ -12,6 +19,7 @@ function menu(th) {
         clearTimers();
         if (theme){
             document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
+
         }
         else{
             document.querySelector('.check').firstChild.style.filter = "grayscale(100%) invert()";
@@ -49,6 +57,24 @@ function settingspage(){
 function removecontent() {
     document.getElementById('contentmaincontent').innerHTML = '';
 }
+// Exit page
+function exit(){
+    let cont = document.querySelector('.content');
+    cont.insertAdjacentHTML('beforeend', `<div class="dialog">
+    <div class="window">
+        <span class="size-name">Do you want to exit?</span>
+        <div class="yes-no">
+            <button class="blue-button account-btn" onclick="window.location = './loginpage.html'">Yes</button>
+            <button class="blue-button account-btn" onclick="dialog_remove()">No</button>
+        </div>
+    </div>
+    <div class="back-blur"></div>
+</div>`);
+}
+function dialog_remove(){
+    let cont = document.querySelector('.dialog');
+    cont.remove();
+}
 
 function getrandom(max) {
     return Math.floor(Math.random() * max);
@@ -85,4 +111,23 @@ function openCard(th) {
         document.getElementById('swcreator').textContent = cur_creator;
         document.getElementById('swprice').textContent = cur_price;
     }, 1500)
+}
+// Change currency
+function course(){
+    let price = parseFloat(`${getrandom(3)}.${getrandom(100)}`, 10);
+    if (coin[0]){
+        return (Math.round(price * 1472 * 100) / 100 + ' Euro');
+    }
+    if (coin[2]){
+        return( Math.round(price * 118230 * 100) / 100 + ' Rub');
+    }
+    if (coin[1]){
+        return (Math.round(price * 1565 * 100) / 100 + ' Usd');
+    }
+    if (coin[3]){
+        return (price + ' ETH');
+    }
+    if (coin[4]){
+        return (Math.round(price / 14.73 * 100) / 100 + ' Btc')
+    }
 }
