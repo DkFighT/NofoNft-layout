@@ -22,7 +22,7 @@ https://dkfight.github.io/NofoNft-layout/nofo/html/index.html
 - Живой поиск (live search) по всем работам и Артам художников
 ![image](https://user-images.githubusercontent.com/116903571/222424239-8858b095-7365-4c1e-ac82-dc899c7ad2f9.png)
 - Страница с настройками сайта
-![image](https://user-images.githubusercontent.com/116903571/222815892-04f819a6-f0e4-4653-a732-562ad9987197.png)
+- ![image](https://user-images.githubusercontent.com/116903571/222851546-a68983de-c182-40bd-96e5-5d4385baf1dc.png)
 - Изменение темы на темную всех страниц сайта
 ![image](https://user-images.githubusercontent.com/116903571/222424561-8e209b6d-f96c-4ec0-8026-21c48beb291e.png)
 ![image](https://user-images.githubusercontent.com/116903571/222424577-899d45d5-56cc-4fe9-942c-809f10aedc58.png)
