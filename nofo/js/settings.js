@@ -70,7 +70,7 @@ navigator.getBattery().then((battery) => {
         }
         batary_level.style.height = `${battery.level * 100}%`;
         batary_level.style.top = `${100 - battery.level * 100}%`;
-        persents.textContent = `${battery.level * 100}%`;
+        persents.textContent = `${Math.floor(battery.level * 100)}%`;
 
     }
 
