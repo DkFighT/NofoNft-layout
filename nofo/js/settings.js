@@ -87,7 +87,7 @@ navigator.getBattery().then((battery) => {
     function updateDischargingInfo() {
         let chargtime = document.getElementById('chargtime');
         if (battery.dischargingTime != 'Infinity'){
-        chargtime.textContent = `Left time: ${Math.floor(battery.dischargingTime / 60 / 60)}h : ${Math.floor(battery.dischargingTime % 60)}m`;
+            chargtime.textContent = `Left time: ${Math.floor(battery.dischargingTime / 60 / 60)}h : ${Math.floor(battery.dischargingTime % 60)}m`;
         }
         else{
             chargtime.textContent = `Left time: Charging`;
