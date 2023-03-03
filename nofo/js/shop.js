@@ -30,7 +30,7 @@ function cardGenerator(n) {
         </div>
         <div class="creator-name">
             <span class="type right-align">Highest bid</span>
-            <span class="name right-align">${getrandom(11)}.${getrandom(100)} ETH</span>
+            <span class="name right-align">${course()}</span>
         </div>
     </div>
 </div>`);
@@ -56,7 +56,7 @@ document.getElementById('search-field').oninput = function (){
         from = 0;
     }
     if(to == ''){
-        to = 100;
+        to = 100000000;
     }
     if(lefttimeto == ''){
         lefttimeto = 25;
