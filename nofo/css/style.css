@@ -932,7 +932,8 @@ input::placeholder {
 
 .big-settings-card {
     height: 100%;
-    width: 64%;
+    width: calc(68% - 20px);
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
