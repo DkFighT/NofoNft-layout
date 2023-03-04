@@ -5,6 +5,13 @@ let words = ['drink', 'memory', 'abrupt', 'guiltless', 'afford', 'design', 'time
 
 let millisecs = [10000, 23000, 43281, 3823];
 
+let serv = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/users';
+
+// получение данных
+fetch(serv).then(response => {
+    console.log(response.json());
+})
+
 let euro = false;
 let rub = false;
 let usd = false;
@@ -17,11 +24,11 @@ let theme = true;
 function menu(th) {
     th.lastChild.onchange = function () {
         clearTimers();
-        if (theme){
+        if (theme) {
             document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
 
         }
-        else{
+        else {
             document.querySelector('.check').firstChild.style.filter = "grayscale(100%) invert()";
         }
         document.querySelector('.check').firstChild.style.opacity = ".3";
@@ -48,7 +55,7 @@ function shoppage() {
     });
 }
 // Create settings page
-function settingspage(){
+function settingspage() {
     $(function () {
         $("#contentmaincontent").load("../html/settings.html");
     });
@@ -58,7 +65,7 @@ function removecontent() {
     document.getElementById('contentmaincontent').innerHTML = '';
 }
 // Exit page
-function exit(){
+function exit() {
     let cont = document.querySelector('.content');
     cont.insertAdjacentHTML('beforeend', `<div class="dialog">
     <div class="window">
@@ -71,7 +78,7 @@ function exit(){
     <div class="back-blur"></div>
 </div>`);
 }
-function dialog_remove(){
+function dialog_remove() {
     let cont = document.querySelector('.dialog');
     cont.remove();
 }
@@ -113,21 +120,21 @@ function openCard(th) {
     }, 1500)
 }
 // Change currency
-function course(){
+function course() {
     let price = parseFloat(`${getrandom(3)}.${getrandom(100)}`, 10);
-    if (coin[0]){
-        return (Math.round(price * 1472 * 100) / 100 + ' Euro');
+    if (coin[0]) {
+        return (Math.round(price * 1472 * 100) / 100 + ' EUR');
     }
-    if (coin[2]){
-        return( Math.round(price * 118230 * 100) / 100 + ' Rub');
+    if (coin[2]) {
+        return (Math.round(price * 118230 * 100) / 100 + ' RUB');
     }
-    if (coin[1]){
-        return (Math.round(price * 1565 * 100) / 100 + ' Usd');
+    if (coin[1]) {
+        return (Math.round(price * 1565 * 100) / 100 + ' USD');
     }
-    if (coin[3]){
+    if (coin[3]) {
         return (price + ' ETH');
     }
-    if (coin[4]){
-        return (Math.round(price / 14.73 * 100) / 100 + ' Btc')
+    if (coin[4]) {
+        return (Math.round(price / 14.73 * 100) / 100 + ' BTC')
     }
 }

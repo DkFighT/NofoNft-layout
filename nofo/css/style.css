@@ -1173,12 +1173,12 @@ label.toggle-item {
 label.toggle-item:before {
     display: block;
     transition: all .2s ease;
-    width: 1.3em;
-    height: 1.3em;
+    width: calc(1.3em + 4px);
+    height: calc(1.3em + 4px);
     top: .25em;
     left: .25em;
     border-radius: 2em;
-    border: 2px solid var(--color3);
+    /* border: 2px solid var(--color3); */
     transition: .3s ease;
 }
 
