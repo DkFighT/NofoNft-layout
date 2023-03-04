@@ -47,11 +47,11 @@ navigator.getBattery().then((battery) => {
         let persents = document.getElementById('persent');
         if (battery.charging) {
             charge.style.display = 'flex';
-            persents.style.display = 'none';
+            persents.style.top = '70%';
         }
         else {
             charge.style.display = 'none';
-            persents.style.display = 'block';
+            persents.style.top = '50%';
         }
     }
 

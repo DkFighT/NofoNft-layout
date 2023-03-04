@@ -28,7 +28,6 @@ function login() {
 
 let serv = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/users';
 
-
 // отправка данных
 function sendRequest(method, url, data = null) {
     fetch(url, {
@@ -48,11 +47,10 @@ function create_new_acc() {
     let us_name = document.login.name.value;
     let f_password = document.login.password.value;
     let s_password = document.login.onepassword.value;
-
     if (f_password == s_password) {
         getRequest(serv).then(data => {
             let flag = true;
-            if (data.length != 0){
+            if (data.length != 0) {
                 for (let i = 0; i < data.length; i++) {
                     if (log == data[i]['login']) {
                         alert('Данный логин уже существует');
@@ -73,7 +71,7 @@ function create_new_acc() {
                     window.location.replace(`../html/index.html?login=${log}&user_name=${us_name}`);
                 }
             }
-            else{
+            else {
                 let body = {
                     login: log,
                     name: us_name,
@@ -91,20 +89,31 @@ function create_new_acc() {
 }
 
 function check_acc() {
-
     getRequest(serv).then(data => {
         let login = document.login.log.value;
+        let index = 0;
+        let flag = false;
         for (let i = 0; i < data.length; i++) {
             if (login == data[i]['login']) {
-                let password = document.login.password.value;
-                if (password == data[i]['password']) {
-                    window.location.replace(`../html/index.html?login=${login}`);
-                }
-                else {
-                    alert('Неверный пароль')
-                }
+                flag = true;
+                index = i;
                 break;
             }
+            else {
+                flag = false;
+            }
+        }
+        if (flag) {
+            let password = document.login.password.value;
+            if (password == data[index]['password']) {
+                window.location.replace(`../html/index.html?login=${login}`);
+            }
+            else {
+                alert('Неверный пароль')
+            }
+        }
+        else{
+            alert('Такого пользователя нет')
         }
     });
     return false;

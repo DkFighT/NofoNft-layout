@@ -993,6 +993,7 @@ input::placeholder {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    transition: all .2s ease-in-out;
 }
 
 h2 {
@@ -1134,7 +1135,7 @@ h2 {
     gap: 25px;
 }
 
-input[type="text"] {
+.login-form input[type="text"] {
     height: 30px;
     width: 50%;
     outline: none;
@@ -1145,7 +1146,7 @@ input[type="text"] {
     transition: all .2s ease-in-out;
 }
 
-input[type="text"]:focus {
+.login-form input[type="text"]:focus {
     width: 65%;
 }
 

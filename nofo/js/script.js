@@ -71,7 +71,7 @@ function exit() {
     <div class="window">
         <span class="size-name">Do you want to exit?</span>
         <div class="yes-no">
-            <button class="blue-button account-btn" onclick="window.location = './loginpage.html'">Yes</button>
+            <button class="blue-button account-btn" onclick="window.replace('./loginpage.html')">Yes</button>
             <button class="blue-button account-btn" onclick="dialog_remove()">No</button>
         </div>
     </div>
