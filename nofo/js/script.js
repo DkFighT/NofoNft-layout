@@ -7,11 +7,6 @@ let millisecs = [10000, 23000, 43281, 3823];
 
 let serv = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/users';
 
-// получение данных
-fetch(serv).then(response => {
-    console.log(response.json());
-})
-
 let euro = false;
 let rub = false;
 let usd = false;
@@ -71,7 +66,7 @@ function exit() {
     <div class="window">
         <span class="size-name">Do you want to exit?</span>
         <div class="yes-no">
-            <button class="blue-button account-btn" onclick="window.replace('./loginpage.html')">Yes</button>
+            <button class="blue-button account-btn" onclick="window.location.replace('../html/loginpage.html')">Yes</button>
             <button class="blue-button account-btn" onclick="dialog_remove()">No</button>
         </div>
     </div>
@@ -138,3 +133,49 @@ function course() {
         return (Math.round(price / 14.73 * 100) / 100 + ' BTC')
     }
 }
+
+// получение данных
+function getRequest(url) {
+    return fetch(url).then(response => { return response.json(); });
+}
+// отправка данных
+function sendRequest(method, url, body = null) {
+    fetch(url, {
+        method: method,
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(data)
+    });
+}
+
+function getname() {
+    let param = (new URL(document.location)).searchParams;
+    let flag = false;
+
+    getRequest(serv).then(data => {
+        let user_name = document.getElementById('username');
+        let hi_name = document.getElementById('hiname');
+        let ava = document.getElementById('ava');
+        let banner = document.getElementById('banner');
+        let login = param.get('login');
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]['login'] == login) {
+                hi_name.innerHTML = `Hello, ${data[i]['name']}`;
+                user_name.innerHTML = `${data[i]['name']}`;
+                ava.src = data[i]['ava'];
+                banner.src = data[i]['banner'];
+                flag = false;
+                break;
+            }
+            else {
+                flag = true;
+            }
+        }
+        if (flag) {
+            window.location.replace('../html/loginpage.html');
+        }
+    });
+}
+
+getname();

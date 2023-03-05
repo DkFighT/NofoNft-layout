@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,43 +11,55 @@
 
     <script src="../js/preload.js"></script>
     <script src="../js/notify.js"></script>
-    
+
 </head>
+
 <body onload="mainpage()">
     <div class="content">
         <div class="menu-bar">
             <div class="menu-points">
                 <img src="../resources/Group 2.png" alt="logo" class="logo">
-                <div class="menu-point check" onclick="menu(this); mainpage();" id="auctionpage"><img src="../resources/category-2.png" alt="category1"><input type="radio" name="menu" checked class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this); shoppage();" id="shop"><img src="../resources/shop.png" alt="category2"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/Folder.png" alt="category3"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/judge.png" alt="category4"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/notification-favorite.png" alt="category5"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png" alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png" alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point check" onclick="menu(this); mainpage();" id="auctionpage"><img
+                        src="../resources/category-2.png" alt="category1"><input type="radio" name="menu" checked
+                        class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this); shoppage();" id="shop"><img src="../resources/shop.png"
+                        alt="category2"><input type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this)"><img src="../resources/Folder.png" alt="category3"><input
+                        type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png"
+                        alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png"
+                        alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
             </div>
             <div class="exit" onclick="exit(); return false"><img src="../resources/Logout.png" alt="exit"></div>
         </div>
         <div class="main-content" id="maincontent">
-            <div class="preloader" id="preloader"><div class="loader"></div></div>
+            <div class="preloader" id="preloader">
+                <div class="loader"></div>
+            </div>
             <div class="header">
                 <div class="hello">
-                    <span class="size-name">Hello, Andri</span>
+                    <span class="size-name" id="hiname">Hello, Andri</span>
                     <span class="type-size">39.506M+ items in NFT market Place!</span>
                 </div>
                 <div class="search">
                     <div class="search-panel" id="search-panel">
                         <img src="../resources/search-normal.png" alt="search">
                         <form onsubmit="return false;" name="search" class="search-form">
-                            <input type="text" name="field" class="search-field" id="search-field" placeholder="Search something...">
+                            <input type="text" name="field" class="search-field" id="search-field"
+                                placeholder="Search something...">
                         </form>
                     </div>
                     <div class="grey-btn" id="filter-btn">
                         <img src="../resources/Filter.png" alt="filter">
                         <div class="filter-field">
                             <div class="pricefromto">
-                                <span class="name">Price From<input type="text" id="from" pattern="[0-9]{1,}" placeholder="0"> To <input type="text" id="to" pattern="[0-9]{1,}" placeholder="100"></span>
-                                <span class="name">Remaining time <input type="text" id="fromtime" pattern="[0-9]{2}" placeholder="12"> To <input type="text" pattern="[0-9]{2}" placeholder="12" id="fromtimeto"></span>
+                                <span class="name">Price From<input type="text" id="from" pattern="[0-9]{1,}"
+                                        placeholder="0"> To <input type="text" id="to" pattern="[0-9]{1,}"
+                                        placeholder="100"></span>
+                                <span class="name">Remaining time <input type="text" id="fromtime" pattern="[0-9]{2}"
+                                        placeholder="12"> To <input type="text" pattern="[0-9]{2}" placeholder="12"
+                                        id="fromtimeto"></span>
                             </div>
                         </div>
                     </div>
@@ -62,18 +75,21 @@
         </div>
         <div class="right-bar">
             <div class="accout">
-                <div class="avabg"><img src="../resources/Subtract.png" alt="background"><img src="../resources/Ellipse 9.png" alt="ava" class="ava"></div>
+                <div class="avabg"><img src="../resources/Subtract.png" alt="background" class="banner" id="banner"><img
+                        src="../resources/Ellipse 9.png" alt="ava" class="ava" id="ava"></div>
                 <div class="description-account">
-                    <span class="name">Andri Young</span>
+                    <span class="name" id="username">Andri Young</span>
                     <span class="type">Collector</span>
                 </div>
                 <div class="biography">
                     <span class="name">Biography</span>
-                    <span class="type">The Collector was effectively the most important administrative figure in an Indian district.</span>
+                    <span class="type">The Collector was effectively the most important administrative figure in an
+                        Indian district.</span>
                 </div>
                 <div class="description-buttons">
                     <button class="blue-button account-btn">Your Account</button>
-                    <div class="grey-btn"><input type="file" name="upload" id="upload"><img src="../resources/Upload.png" alt="share"></div>
+                    <div class="grey-btn"><input type="file" name="upload" id="upload"><img
+                            src="../resources/Upload.png" alt="share"></div>
                     <div class="grey-btn"><img src="../resources/Group 427320311.png" alt="more"></div>
                 </div>
                 <div class="line"></div>
@@ -86,7 +102,8 @@
                             <img src="../resources/ethereum-(eth).png" alt="ico">
                             <span class="type">6.049.85</span>
                         </div>
-                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png" alt="plus"></div>
+                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png"
+                                alt="plus"></div>
                     </div>
                     <div class="person">
                         <span class="acc-number">2</span>
@@ -96,7 +113,8 @@
                             <img src="../resources/ethereum-(eth).png" alt="ico">
                             <span class="type">6.049.85</span>
                         </div>
-                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png" alt="plus"></div>
+                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png"
+                                alt="plus"></div>
                     </div>
                     <div class="person">
                         <span class="acc-number">3</span>
@@ -106,7 +124,8 @@
                             <img src="../resources/ethereum-(eth).png" alt="ico">
                             <span class="type">6.049.85</span>
                         </div>
-                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png" alt="plus"></div>
+                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png"
+                                alt="plus"></div>
                     </div>
                     <div class="person">
                         <span class="acc-number">4</span>
@@ -116,7 +135,8 @@
                             <img src="../resources/ethereum-(eth).png" alt="ico">
                             <span class="type">6.049.85</span>
                         </div>
-                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png" alt="plus"></div>
+                        <div class="grey-btn-cubic" onclick="follow(this)"><img src="../resources/Group 427320314.png"
+                                alt="plus"></div>
                     </div>
                 </div>
             </div>
@@ -125,4 +145,5 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js" type="text/javascript"></script>
 </body>
+
 </html>

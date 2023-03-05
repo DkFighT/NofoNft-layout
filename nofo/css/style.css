@@ -448,8 +448,6 @@ input::placeholder {
     background-color: var(--color1);
     overflow: auto;
 }
-
-/* ////////////////////////////////////////////////////////////////////// */
 .accout {
     position: relative;
     top: 40px;
@@ -467,12 +465,20 @@ input::placeholder {
     justify-content: center;
     position: relative;
 }
-
+.banner{
+    height: 180px;
+    width: 290px;
+    border-radius: 10px;
+}
 .ava {
     position: absolute;
-    left: 65px;
+    left: 58px;
     bottom: 0;
     transform: translate(0, 50%);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: solid 7px var(--color1);
 }
 
 .description-account {
@@ -587,8 +593,6 @@ input::placeholder {
 }
 
 .grey-btn:hover {
-    /* transform: scale(1.05); */
-    /* transform-origin: top; */
     border: 1px solid #d7d8df;
 }
 
@@ -835,7 +839,6 @@ input::placeholder {
 
 .preloader {
     height: 100%;
-    /* margin-left: 100px; */
     width: 100%;
     position: absolute;
     top: 0;
@@ -1136,7 +1139,7 @@ h2 {
     gap: 25px;
 }
 
-.login-form input[type="text"] {
+.login-form input {
     height: 30px;
     width: 50%;
     outline: none;
@@ -1147,7 +1150,7 @@ h2 {
     transition: all .2s ease-in-out;
 }
 
-.login-form input[type="text"]:focus {
+.login-form input:focus {
     width: 65%;
 }
 
@@ -1180,7 +1183,6 @@ label.toggle-item:before {
     top: .25em;
     left: .25em;
     border-radius: 2em;
-    /* border: 2px solid var(--color3); */
     transition: .3s ease;
 }
 
@@ -1191,8 +1193,6 @@ label.toggle-item:before {
 
 label:before {
     border: none;
-    /* width: 2.5em;
-    height: 2.5em; */
     background: #fff;
     transform: rotate(-25deg);
 }
