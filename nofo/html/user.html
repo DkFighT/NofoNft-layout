@@ -1,0 +1,31 @@
+<b class="left-align"><span class="size-name">Your Account</span></b>
+<div class="settings-block">
+    <div class="change-ava">
+        <form onsubmit="return saveData();" name="edit" id="edit"></form>
+        <div class="hello acc">
+            <span class="size-name">Full name</span>
+            <input type="text" id="us_name" class="search-field field-color" placeholder="Name" value="" required form="edit">
+            <input type="text" id="us_sername" class="search-field field-color" placeholder="SerName" value="" form="edit">
+        </div>
+        <div class="hello acc">
+            <span class="size-name">Security</span>
+            <div class="string">Login: <input type="text" id="log" class="search-field field-color" placeholder="Login" value="" required form="edit"></div>
+            <div class="string">Password: <input type="password" id="pas" class="search-field field-color" placeholder="Password" value="" required form="edit"><button class="view-btn" id="view"></button></div>
+        </div>
+    </div>
+    <div class="change-password">
+        <div class="change-ava pass">
+        </div>
+        <div class="change-ava pass">
+            <div class="newava"><div id="ch_ava1" onclick="createPathDialog()"><img src="" alt="AVA" id="ch_ava"><img src="../resources/edit.png" alt="" class="edit"></div><span>Change photo</span></div>
+        </div>
+        <div class="change-ava pass">
+            <div class="hello logg">
+                <div class="string">BIO: <textarea id="bio_area" id="" cols="10" rows="20" class="search-field field-color-area" placeholder="Bio" value="" form="edit"></textarea></div>
+            </div>
+        </div>
+    </div>
+    <button class="blue-button account-btn" form="edit" type="submit">Save</button>
+</div>
+<script>preload()</script>
+<script src="../js/user.js"></script>

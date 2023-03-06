@@ -7,7 +7,7 @@ function registration() {
         <input type="text" name="name" placeholder="Name" pattern="[a-zA-Z0-9]{5,}" required>
         <input type="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9]{3,}" required>
         <input type="password" name="onepassword" placeholder="One more password" pattern="[a-zA-Z0-9]{3,}" required>
-        <button class="blue-button account-btn" type="button" onclick="create_new_acc()">Sign Up</button>
+        <button class="blue-button account-btn" type="submit" onclick="create_new_acc()">Sign Up</button>
     </form>
     <a href="javascript:login();">Sign In</a>
 </div>`;
@@ -20,7 +20,7 @@ function login() {
     <form onsubmit="return false;" name="login" class="login-form">
         <input type="text" name="log" placeholder="Login" pattern="[a-zA-Z0-9]{5,}" required>
         <input type="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9]{3,}" required>
-        <button class="blue-button account-btn" type="button" onclick="check_acc()">Sign In</button>
+        <button class="blue-button account-btn" type="submit" onclick="check_acc()">Sign In</button>
     </form>
     <a href="javascript:registration();">No account? Registaration</a>
 </div>`;

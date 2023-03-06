@@ -55,6 +55,11 @@ function settingspage() {
         $("#contentmaincontent").load("../html/settings.html");
     });
 }
+function userpage(){
+    $(function () {
+        $("#contentmaincontent").load("../html/user.html");
+    });
+}
 // Remove all content from main page
 function removecontent() {
     document.getElementById('contentmaincontent').innerHTML = '';
@@ -145,7 +150,7 @@ function sendRequest(method, url, body = null) {
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(body)
     });
 }
 
@@ -158,6 +163,7 @@ function getname() {
         let hi_name = document.getElementById('hiname');
         let ava = document.getElementById('ava');
         let banner = document.getElementById('banner');
+        let bio = document.getElementById('bio');
         let login = param.get('login');
         for (let i = 0; i < data.length; i++) {
             if (data[i]['login'] == login) {
@@ -165,6 +171,7 @@ function getname() {
                 user_name.innerHTML = `${data[i]['name']}`;
                 ava.src = data[i]['ava'];
                 banner.src = data[i]['banner'];
+                bio.innerHTML = data[i]['bio'];
                 flag = false;
                 break;
             }

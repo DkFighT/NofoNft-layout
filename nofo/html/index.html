@@ -28,6 +28,8 @@
                         type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png"
                         alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
+                <div class="menu-point" onclick="menu(this); userpage();"><img src="../resources/user.png"
+                        alt="category4"><input type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png"
                         alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
             </div>
@@ -83,7 +85,8 @@
                 </div>
                 <div class="biography">
                     <span class="name">Biography</span>
-                    <span class="type">The Collector was effectively the most important administrative figure in an
+                    <span class="type" id="bio">The Collector was effectively the most important administrative figure
+                        in an
                         Indian district.</span>
                 </div>
                 <div class="description-buttons">
