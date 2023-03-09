@@ -60,6 +60,11 @@ function userpage(){
         $("#contentmaincontent").load("../html/user.html");
     });
 }
+function artspage(){
+    $(function () {
+        $("#contentmaincontent").load("../html/arts.html");
+    });
+}
 // Remove all content from main page
 function removecontent() {
     document.getElementById('contentmaincontent').innerHTML = '';
@@ -185,4 +190,54 @@ function getname() {
     });
 }
 
+function youracc() {
+    clearTimers();
+    let shopmenu = document.getElementById('user_page_id');
+    shopmenu.lastChild.checked = true;
+    document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
+    document.querySelector('.check').firstChild.style.opacity = ".3";
+    document.querySelector('.check').classList.remove('check');
+    shopmenu.classList.add("check");
+    shopmenu.firstChild.style.filter = "grayscale(0)";
+    shopmenu.firstChild.style.opacity = "1";
+    removecontent();
+    let preloader = document.getElementById('preloader');
+    preloader.style.display = 'flex';
+    userpage();
+}
+function yourarts(){
+    clearTimers();
+    let shopmenu = document.getElementById('artspage');
+    shopmenu.lastChild.checked = true;
+    document.querySelector('.check').firstChild.style.filter = "grayscale(100%)";
+    document.querySelector('.check').firstChild.style.opacity = ".3";
+    document.querySelector('.check').classList.remove('check');
+    shopmenu.classList.add("check");
+    shopmenu.firstChild.style.filter = "grayscale(0)";
+    shopmenu.firstChild.style.opacity = "1";
+    removecontent();
+    let preloader = document.getElementById('preloader');
+    preloader.style.display = 'flex';
+    artspage();
+}
+
+function warn_alert(text, btn_txt) {
+    let cont = document.querySelector('.content');
+    cont.insertAdjacentHTML('beforeend', `<div class="dialog">
+    <div class="window">
+        <span class="size-name">${text}</span>
+        <div class="yes-no">
+            <button class="blue-button account-btn" onclick="dialog_remove()">${btn_txt}</button>
+        </div>
+    </div>
+    <div class="back-blur"></div>
+</div>`);
+}
+
+function shareacc(){
+    warn_alert('Link to your profile was copied!', 'Ok');
+    navigator.clipboard.writeText(document.location.href.split('/').slice(0, document.location.href.split('/').length-1).join('/')+'/'+`followacc.html?login=${(new URL(document.location)).searchParams.get('login')}`).then().catch(err => {console.log('Something went wrong', err);});
+}
+
 getname();
+console.log();

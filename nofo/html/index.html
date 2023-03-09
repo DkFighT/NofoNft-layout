@@ -24,11 +24,11 @@
                         class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this); shoppage();" id="shop"><img src="../resources/shop.png"
                         alt="category2"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this)"><img src="../resources/Folder.png" alt="category3"><input
+                <div class="menu-point" onclick="menu(this); artspage();" id="artspage"><img src="../resources/Folder.png" alt="category3"><input
                         type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this)"><img src="../resources/message-favorite.png"
                         alt="category6"><input type="radio" name="menu" class="menu-radio"></div>
-                <div class="menu-point" onclick="menu(this); userpage();"><img src="../resources/user.png"
+                <div class="menu-point" onclick="menu(this); userpage();" id="user_page_id"><img src="../resources/user.png"
                         alt="category4"><input type="radio" name="menu" class="menu-radio"></div>
                 <div class="menu-point" onclick="menu(this); settingspage();"><img src="../resources/setting-2.png"
                         alt="category7"><input type="radio" name="menu" class="menu-radio"></div>
@@ -90,10 +90,9 @@
                         Indian district.</span>
                 </div>
                 <div class="description-buttons">
-                    <button class="blue-button account-btn">Your Account</button>
-                    <div class="grey-btn"><input type="file" name="upload" id="upload"><img
-                            src="../resources/Upload.png" alt="share"></div>
-                    <div class="grey-btn"><img src="../resources/Group 427320311.png" alt="more"></div>
+                    <button class="blue-button account-btn" onclick="youracc()">Your Account</button>
+                    <div class="grey-btn" onclick="yourarts()"><img src="../resources/Upload.png" alt="share"></div>
+                    <div class="grey-btn" onclick="shareacc()"><img src="../resources/Group 427320311.png" alt="more"></div>
                 </div>
                 <div class="line"></div>
                 <div class="recomendations">
