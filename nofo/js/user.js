@@ -32,7 +32,7 @@ function createPathDialog() {
     cont.insertAdjacentHTML('beforeend', `<div class="dialog">
     <div class="window">
         <span class="size-name">Enter image link</span>
-        <input type="text" id="link" class="search-field field-color img_link_field" placeholder="http(s)://..." value="">
+        <input type="url" id="link" class="search-field field-color img_link_field" placeholder="http(s)://..." value="">
         <div class="yes-no">
             <button class="blue-button account-btn" onclick="replacelink()">Apply</button>
             <button class="blue-button account-btn" onclick="dialog_remove()">Cancel</button>
@@ -70,7 +70,7 @@ function saveData() {
     }
     if (login_field != '' && pass.value != '' && usr_name.value != '') {
         sendRequest("PUT", serv + `/${user_id}`, data);
-        // setTimeout(() => { window.location.reload(); }, 500)
+        setTimeout(() => { window.location.reload(); }, 500);
     }
     else {
         alert('Недостаточно данных');

@@ -61,10 +61,10 @@ function addcard(card_name, card_url) {
             }
             console.log(newdata['cards'].concat(ncards));
             sendRequest('PUT', serv + '/' + card_id, some);
-        })
+        });
     }
     else {
-        warn_alert('Not enogth data', 'Ok');
+        warn_alert('Not enough data', 'Ok');
     }
 }
 
@@ -75,7 +75,7 @@ function addcardalert() {
         <span class="name">Name</span>
         <input name="entername" id="entername" type="text" class="search-field field-color img_link_field">
         <span class="name">Image link</span>
-        <input name="enterimagelink" id="enterimagelink" type="text" class="search-field field-color img_link_field">
+        <input name="enterimagelink" id="enterimagelink" type="url" class="search-field field-color img_link_field">
         <div class="yes-no">
             <button class="blue-button account-btn" onclick="addcard(document.getElementById('entername').value,document.getElementById('enterimagelink').value); dialog_remove()">Create</button>
         </div>
@@ -155,6 +155,6 @@ function generateYourArts() {
                 break;
             }
         }
-    })
+    });
 }
 generateYourArts();
