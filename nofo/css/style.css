@@ -64,12 +64,15 @@ body {
     padding: 20px;
     width: min(100% - 80px, 1000px);
     display: flex;
+    align-items: center;
     position: relative;
     margin-inline: auto;
     flex-direction: column;
     z-index: 5;
     background-color: var(--color1);
     border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .menu-bar {
     width: 110px;
@@ -767,7 +770,9 @@ input::placeholder {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.03);
     border-radius: 8px;
 }
-
+.new-card{
+    background-color: var(--color2);
+}
 .like-header {
     height: 32px;
     width: 90%;
@@ -905,6 +910,14 @@ input::placeholder {
     gap: 20px;
     justify-content: left;
     overflow: auto;
+}
+.shop-new {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
 }
 
 .hiden {
@@ -1385,7 +1398,7 @@ label:after {
 
 .banner_acc {
     width: 100%;
-    height: 300px;
+    min-height: 250px;
     position: relative;
     border-radius: 10px;
 }
@@ -1401,12 +1414,23 @@ label:after {
 }
 .new-name{
     position: relative;
-    left: 300px;
+    left: -100px;
     top: 20px;
     font-weight: bold;
 }
 .new-bio{
     margin-top: 100px;
+}
+.aligning-block-rep{
+    width: calc(100% - 300px);
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 50%;
+}
+.yourarts-coll{
+    width: 95%;
+    height: 50%;
+    /* overflow: scroll; */
 }
 @media screen and (orientation: portrait) {
     .right-bar {

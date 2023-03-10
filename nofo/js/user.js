@@ -10,7 +10,7 @@ getRequest(serv).then(data => {
     let lg = (new URL(document.location)).searchParams;
     for (let i = 0; i < data.length; i++) {
         if (lg.get('login') == data[i]['login']) {
-            user_id = i + 1;
+            user_id = data[i]['id'];
             usr_name.value = data[i]['name'].split(' ')[0];
             try {
                 usr_sername.value = data[i]['name'].split(' ')[1];
@@ -70,7 +70,7 @@ function saveData() {
     }
     if (login_field != '' && pass.value != '' && usr_name.value != '') {
         sendRequest("PUT", serv + `/${user_id}`, data);
-        setTimeout(() => { window.location.reload(); }, 500)
+        // setTimeout(() => { window.location.reload(); }, 500)
     }
     else {
         alert('Недостаточно данных');
